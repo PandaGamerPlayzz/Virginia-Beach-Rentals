@@ -1,0 +1,55 @@
+.nav-bar, .nav-bar-blank {
+    width: 100vw;
+    height: 72px;
+    background-color: #0F3141;
+}
+
+.nav-bar-blank {
+    background-color: transparent;
+}
+
+.nav-bar ul {
+    position: relative;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav-bar ul > li {
+    display: inline;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Tangerine', cursive;
+    height: 72px;
+}
+
+.nav-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.nav-bar a > span {
+    position: relative;
+    padding: 0px 16px;
+}
+
+.nav-bar li.nav-float-left {
+    float: left;
+}
+
+.nav-bar .nav-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-bar li.nav-float-right {
+    float: right;
+}
+
+#nav-link-home {
+    font-size: 48px;
+}

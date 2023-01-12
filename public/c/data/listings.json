@@ -1,0 +1,31 @@
+[
+    {
+        "name": "4801 Ocean Front Ave",
+        "description": "This is a placeholder property",
+        "url": "https://www.zillow.com/homedetails/4801-Ocean-Front-Ave-Virginia-Beach-VA-23451/65793214_zpid/",
+        "address": {
+            "street_number": 4801,
+            "street_name": "Ocean Front",
+            "street_type": "Ave",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://photos.zillowstatic.com/fp/1be157563ce5c168ea6dd707ef4790f0-cc_ft_1536.webp",
+            "https://photos.zillowstatic.com/fp/0f9bde226140afe7d309f9f3970b8907-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/671842852f820f16c99824b21dd999e8-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/ce5b8602681468b7883b3d60a9b5bef8-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/7391ff9bab027477edd187839e2e6740-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/a7e27aa38a6e81222c821296b889800a-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/974c00871d683100a2e5412bdfbc73df-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/b167aea80a78bd85ceed6cb910057bbb-cc_ft_384.webp"
+        ],
+        "info": {
+            "price_per_night": 999,
+            "bedrooms": 5,
+            "bathrooms": 5,
+            "sqft": 5660
+        }
+    }
+]
