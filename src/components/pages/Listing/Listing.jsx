@@ -4,10 +4,17 @@ import Linkify from 'react-linkify';
 
 import Page404 from '../Page404/Page404';
 
+const MAPS_API_KEY = "AIzaSyBm-hjwwdTR9YYWlVzSKsMPwl7n8IrLr5I";
+
 export function getAllListings() {
     return fetch(`/c/data/listings.json`)
     .then((response) => response.json())
     .then((responseJson) => {
+        for(let i = 0; i < responseJson.length; i++) {
+            let listing = responseJson[i];
+            listing.maps_api_url = listing.maps_api_url.replace("{API_KEY}", MAPS_API_KEY);
+        }
+
         return responseJson;
     })
     .catch((error) => {
@@ -42,6 +49,7 @@ const Listing = () => {
     let [listing, setListing] = useState(undefined);
 
     useEffect(() => {
+        console.log();
         let term = searchParams.get("name") || searchParams.get("id")
 
         getListing(term).then((listingResult) => {
@@ -52,7 +60,7 @@ const Listing = () => {
     }, [searchParams]);
 
     return (() => {
-        if(listing === undefined) {
+        if(listing === undefined || listing.maps_api_url.includes("{API_KEY}")) {
             return <Page404 />
         } else if(searchParams.has("show_json") && searchParams.get("show_json") === "true") {
             return <section id="section-listing">
@@ -67,6 +75,7 @@ const Listing = () => {
         } else {
             return <section id="section-listing">
                 <h1>{listing.name}</h1>
+                <iframe src={listing.maps_api_url} id="google-maps-iframe" title="google-maps-iframe" width={600} height={450} style={{border: '0'}} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"></iframe>
             </section>
         }
     })();

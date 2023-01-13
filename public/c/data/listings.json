@@ -3,7 +3,7 @@
         "name": "4801 Ocean Front Ave",
         "description": "This is a placeholder property",
         "url": "https://www.zillow.com/homedetails/4801-Ocean-Front-Ave-Virginia-Beach-VA-23451/65793214_zpid/",
-        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&amp;q=4801+Ocean+Front+Ave,+Virginia+Beach,+VA",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=4801+Ocean+Front+Ave,+Virginia+Beach,+VA",
         "address": {
             "street_number": 4801,
             "street_name": "Ocean Front",
