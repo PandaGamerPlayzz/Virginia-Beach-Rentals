@@ -1,0 +1,76 @@
+#blur {
+    position: absolute;
+    z-index: 2000;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0.25;
+    backdrop-filter: blur(30px);
+}
+
+#listing-wrapper {
+    position: absolute;
+    z-index: 2001;
+    top: 50%;
+    left: 50%;
+    height: 95vh;
+    width: 70vw;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#listing-wrapper #listing-json {
+    overflow: auto;
+}
+
+#listing-json {
+    height: 100%;
+}
+
+#listing-images-wrapper {
+    position: relative;
+    height: 100%;
+    width: 57.5%;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: auto;
+    overflow-y: scroll;
+}
+
+#google-maps-iframe, #listing-images-wrapper img {
+    position: relative;
+    width: 100%;
+    grid-column: span 1;
+}
+
+#google-maps-iframe, #listing-images-wrapper .title-image {
+    grid-column: span 2;
+}
+
+#google-maps-iframe {
+    aspect-ratio: 16 / 9;
+}
+
+#listing-not-found {
+    position: absolute;
+    display: block;
+    font-size: 120px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Tangerine', cursive;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}

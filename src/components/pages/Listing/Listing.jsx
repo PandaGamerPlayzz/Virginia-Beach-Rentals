@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Linkify from 'react-linkify';
 
-import Page404 from '../Page404/Page404';
+import Styles from './Listing.module.css';
 
 const MAPS_API_KEY = "AIzaSyBm-hjwwdTR9YYWlVzSKsMPwl7n8IrLr5I";
 
@@ -42,14 +42,38 @@ export function getListing(searchTerm) {
     }
 }
 
-const Listing = () => {
+export function getImages(listing) {
+    let images = [];
+
+    for(let i = 0; i < listing.images.length; i++) {
+        let image;
+
+        if(i === 0) {
+            image = <img src={listing.images[i]} className={Styles["title-image"]} alt={""} />;
+        } else {
+           image = <img src={listing.images[i]} alt={""} />;
+        }
+
+        images.push(image);
+    }
+
+    return images;
+}
+
+const Listing = (props) => {
     // eslint-disable-next-lin
     let [searchParams] = useSearchParams();
 
     let [listing, setListing] = useState(undefined);
 
+    let listingWrapperRef = useRef(null);
+
     useEffect(() => {
-        console.log();
+        document.addEventListener("click", handleOutsideClick, true);
+
+        let body = document.getElementsByTagName("body")[0];
+        body.classList.add("disable-scroll");
+
         let term = searchParams.get("name") || searchParams.get("id")
 
         getListing(term).then((listingResult) => {
@@ -59,25 +83,63 @@ const Listing = () => {
         });
     }, [searchParams]);
 
-    return (() => {
-        if(listing === undefined || listing.maps_api_url.includes("{API_KEY}")) {
-            return <Page404 />
-        } else if(searchParams.has("show_json") && searchParams.get("show_json") === "true") {
-            return <section id="section-listing">
-                <h1>
-                    <pre style={{fontFamily: "serif", fontSize: "30px"}}>
-                        <Linkify properties={{target: "_blank"}}>
-                            {JSON.stringify(listing, null, 2)}
-                        </Linkify>
-                    </pre>
-                </h1>
-            </section>
-        } else {
-            return <section id="section-listing">
-                <h1>{listing.name}</h1>
-                <iframe src={listing.maps_api_url} id="google-maps-iframe" title="google-maps-iframe" width={600} height={450} style={{border: '0'}} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"></iframe>
-            </section>
+    const handleOutsideClick = (event) => {
+        if(!listingWrapperRef.current.contains(event.target)) {
+            window.history.back();
         }
+    }
+
+    return (() => {
+        if(!searchParams.has("lt")) return
+
+        if(listing === undefined) {
+            return <>
+                <div id={Styles["blur"]}></div>
+                <section id="section-listing">
+                    <div id={Styles["listing-wrapper"]} ref={listingWrapperRef}>
+                        <h1 id={Styles["listing-not-found"]}>Listing not found</h1>
+                    </div>
+                </section>
+            </>
+        } else if(searchParams.get("lt") === "json") {
+            return <>
+                <div id={Styles["blur"]}></div>
+                <section id="section-listing">
+                    <div id={Styles["listing-wrapper"]} ref={listingWrapperRef}>
+                        <pre id={Styles["listing-json"]} style={{fontFamily: "serif", fontSize: "30px"}}>
+                            <Linkify properties={{target: "_blank"}}>
+                                {JSON.stringify(listing, null, 2)}
+                            </Linkify>
+                        </pre>
+                    </div>
+                </section>
+            </>
+        } else if(searchParams.get("lt") === "modal") {
+            let images = getImages(listing);
+
+            return <>
+                <div id={Styles["blur"]}></div>
+                <section id="section-listing">
+                    <div id={Styles["listing-wrapper"]} ref={listingWrapperRef}>
+                        <div id={Styles["listing-images-wrapper"]}>
+                            {images.slice(0, 1)}
+                            <iframe src={listing.maps_api_url} id={Styles["google-maps-iframe"]} title="google-maps-iframe" style={{border: '0'}} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"></iframe>
+                            {images.slice(1)}
+                        </div>
+                    </div>
+                </section>
+            </>
+        } else if(searchParams.get("lt") === "full") {
+            let images = getImages(listing);
+
+            return <>
+                <section id="section-listing">
+                    <iframe src={listing.maps_api_url} width={600} height={450} title="google-maps-iframe" style={{border: '0'}} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+            </>
+        }
+
+        return
     })();
 }
 

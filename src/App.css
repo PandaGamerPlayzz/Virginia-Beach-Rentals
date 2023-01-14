@@ -6,6 +6,14 @@
     border: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+body.disable-scroll {
+    overflow: hidden;
+}
+
 .sticky {
     position: fixed;
     top: 0;

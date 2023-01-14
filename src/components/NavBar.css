@@ -2,6 +2,7 @@
     width: 100vw;
     height: 72px;
     background-color: #0F3141;
+    box-shadow: 0 0 25px rgb(10 36 88 / 25%);
 }
 
 .nav-bar-blank {

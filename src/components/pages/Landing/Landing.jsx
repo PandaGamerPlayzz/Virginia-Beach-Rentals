@@ -1,8 +1,17 @@
-const Landing = () => {
-    return (
-        <section id="section-landing">
+import { useSearchParams } from 'react-router-dom';
 
-        </section>
+import Listing from "../Listing/Listing.jsx";
+
+const Landing = () => {
+    let [searchParams] = useSearchParams();
+
+    return (
+        <>
+            <Listing show={searchParams.get("sl") === "true" ? true : false} />
+            <section id="section-landing">
+                
+            </section>
+        </>
     );
 }
 
