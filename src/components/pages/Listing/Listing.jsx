@@ -71,8 +71,10 @@ const Listing = (props) => {
     useEffect(() => {
         document.addEventListener("click", handleOutsideClick, true);
 
-        let body = document.getElementsByTagName("body")[0];
-        body.classList.add("disable-scroll");
+        if(searchParams.has("lt")) {
+            let body = document.getElementsByTagName("body")[0];
+            body.classList.add("disable-scroll");
+        }
 
         let term = searchParams.get("name") || searchParams.get("id")
 
@@ -130,7 +132,7 @@ const Listing = (props) => {
                 </section>
             </>
         } else if(searchParams.get("lt") === "full") {
-            let images = getImages(listing);
+            // let images = getImages(listing);
 
             return <>
                 <section id="section-listing">

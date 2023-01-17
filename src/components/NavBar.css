@@ -1,6 +1,6 @@
 .nav-bar, .nav-bar-blank {
     width: 100vw;
-    height: 72px;
+    height: var(--nav-height);
     background-color: #0F3141;
     box-shadow: 0 0 25px rgb(10 36 88 / 25%);
 }
@@ -19,7 +19,7 @@
     display: inline;
     font-family: 'Barlow Condensed', sans-serif;
     font-family: 'Tangerine', cursive;
-    height: 72px;
+    height: var(--nav-height);
 }
 
 .nav-bar a {
