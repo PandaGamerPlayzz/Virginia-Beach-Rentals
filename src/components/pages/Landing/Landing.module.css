@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+#landing-image1-quote {
+    position: absolute;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #000000;
+    font-size: 47.5px;
+    font-family: 'EB Garamond', serif;
+    font-weight: 100;
+    font-style: italic;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#landing-image1 {
+    position: relative;
+    width: 101vw;
+    height: calc(90vh - var(--nav-height));
+    object-fit: cover;
+    object-position: 50% 1%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#landing-wrapper {
+    position: relative;
+    width: 90vw;
+    min-height: 100vh;
+    left: 50%;
+    transform: translate(-50%, -5vw);
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}

@@ -103,7 +103,7 @@ const Listing = (props) => {
                     </div>
                 </section>
             </>
-        } else if(searchParams.get("lt") === "json") {
+        } else if(searchParams.get("lt") === "json" || props.lt === "json") {
             return <>
                 <div id={Styles["blur"]}></div>
                 <section id="section-listing">
@@ -116,7 +116,9 @@ const Listing = (props) => {
                     </div>
                 </section>
             </>
-        } else if(searchParams.get("lt") === "modal") {
+        } else if(searchParams.get("lt") === "all" || props.lt === "all") {
+        
+        } else if(searchParams.get("lt") === "modal" || props.lt === "modal") {
             let images = getImages(listing);
 
             return <>
@@ -131,7 +133,7 @@ const Listing = (props) => {
                     </div>
                 </section>
             </>
-        } else if(searchParams.get("lt") === "full") {
+        } else if(searchParams.get("lt") === "full" || props.lt === "full") {
             // let images = getImages(listing);
 
             return <>
