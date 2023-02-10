@@ -1,0 +1,62 @@
+.mailing-list {
+    width: 100%;
+    height: 350px;
+    padding-top: 20px;
+}
+
+.mailing-list-wrapper {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    border: 3px solid #0a2458;
+    border-radius: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mailing-list-form {
+    
+}
+
+.mailing-list-form-wrapper {
+    position: absolute;
+    width: 55%;
+    height: 90%;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mailing-list-form-wrapper > h2 {
+    text-align: center;
+    font-family: 'Tangerine', cursive;
+    font-size: 45px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.mailing-list-form > input {
+    background-color: #e0e5ef;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+}
+
+.mailing-list-form > label {
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.mailing-list-form > button {
+    color: #ffffff;
+    background-color: #0a2458;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    border-radius: 200px;
+}

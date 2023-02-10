@@ -1,6 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 
 import Listing from "../Listing/Listing.jsx";
+import MailingListForm from './MailingListForm.jsx';
 
 import Styles from './Landing.module.css';
 
@@ -16,7 +17,7 @@ const Landing = () => {
                     <h1 id={Styles["landing-image1-quote"]}>"A house is made of bricks and beams. A home is made of hopes and dreams."</h1>
                 </div>
                 <div id={Styles["landing-wrapper"]}>
-                
+                    <MailingListForm />
                 </div>
             </section>
         </>
