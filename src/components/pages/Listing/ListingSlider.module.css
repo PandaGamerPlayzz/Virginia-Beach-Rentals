@@ -1,0 +1,16 @@
+.listing-slider {
+    width: 100%;
+    height: 350px;
+    padding-top: 20px;
+}
+
+.listing-slider-wrapper {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    border: 3px solid #0a2458;
+    border-radius: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
