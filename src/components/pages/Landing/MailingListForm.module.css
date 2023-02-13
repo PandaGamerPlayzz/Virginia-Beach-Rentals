@@ -8,15 +8,10 @@
     position: relative;
     width: 90%;
     height: 100%;
-    border: 3px solid #0a2458;
-    border-radius: 20px;
+    box-shadow: 0px 0px 7px #000000;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-}
-
-.mailing-list-form {
-    
 }
 
 .mailing-list-form-wrapper {
@@ -25,7 +20,8 @@
     height: 90%;
     right: 20px;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .mailing-list-form-wrapper > h2 {
@@ -51,7 +47,7 @@
 
 .mailing-list-form > button {
     color: #ffffff;
-    background-color: #0a2458;
+    background-color: #0F3141;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;

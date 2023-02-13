@@ -13,7 +13,7 @@ const Landing = () => {
 
     let [checkInDate, setCheckInDate] = useState("");
     let [checkOutDate, setCheckOutDate] = useState("");
-    let [numGuests, setNumGuests] = useState("");
+    let [numGuests, setNumGuests] = useState(1);
 
     return (
         <>
@@ -26,28 +26,44 @@ const Landing = () => {
                 <div id={Styles["landing-wrapper"]}>
                     <div className={SearchOptionsStyles["listing-search-options"]}>
                         <div className={SearchOptionsStyles["listing-search-options-wrapper"]}>
-                            <form className={SearchOptionsStyles["listing-search-options-form"]}>
-                                <input
-                                    value={checkInDate}
-                                    onChange={e => setCheckInDate(e.target.value)}
-                                    placeholder="Check In"
-                                    name="check-in-date"
-                                    id="check-in-date"
-                                />
-                                <input
-                                    value={checkOutDate}
-                                    onChange={e => setCheckOutDate(e.target.value)}
-                                    placeholder="Check Out"
-                                    name="check-out-date"
-                                    id="check-out-date"
-                                />
-                                <input
-                                    value={numGuests}
-                                    onChange={e => setNumGuests(e.target.value)}
-                                    placeholder="Guests"
-                                    name="num-guests"
-                                    id="num-guests"
-                                />
+                            <form className={SearchOptionsStyles["listing-search-options-form"]} action="/listings/">
+                                <div className={SearchOptionsStyles["check-in-check-out"]}>
+                                    <div className={SearchOptionsStyles["check-in-date"]}>
+                                        <h2>Check-In</h2>
+                                        <input
+                                            value={checkInDate}
+                                            onChange={e => setCheckInDate(e.target.value)}
+                                            placeholder="Check In"
+                                            type="date"
+                                            name="checkin"
+                                            required
+                                        />
+                                    </div>
+                                    <span>→</span>
+                                    <div className={SearchOptionsStyles["check-out-date"]}>
+                                        <h2>Check-Out</h2>
+                                        <input
+                                            value={checkOutDate}
+                                            onChange={e => setCheckOutDate(e.target.value)}
+                                            placeholder="Check Out"
+                                            type="date"
+                                            name="checkout"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div className={SearchOptionsStyles["num-guests"]}>
+                                    <h2>Guests</h2>
+                                    <input
+                                        value={numGuests}
+                                        onChange={e => setNumGuests(e.target.value)}
+                                        placeholder="0"
+                                        type="number"
+                                        name="guests"
+                                        required
+                                    />
+                                </div>
+                                <button type="submit">Find</button>
                             </form>
                         </div>
                     </div>

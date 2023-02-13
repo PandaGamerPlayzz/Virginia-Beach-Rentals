@@ -8,8 +8,7 @@
     position: relative;
     width: 90%;
     height: 100%;
-    border: 3px solid #0a2458;
-    border-radius: 20px;
+    box-shadow: 0px 0px 7px #000000;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

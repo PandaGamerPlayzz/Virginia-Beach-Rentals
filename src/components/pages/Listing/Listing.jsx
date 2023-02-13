@@ -61,7 +61,6 @@ export function getImages(listing) {
 }
 
 const Listing = (props) => {
-    // eslint-disable-next-lin
     let [searchParams] = useSearchParams();
 
     let [listing, setListing] = useState(undefined);
