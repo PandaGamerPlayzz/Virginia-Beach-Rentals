@@ -1,21 +1,74 @@
 .listing-slider {
-    width: 100%;
-    height: 350px;
+    position: relative;
+    width: 100vw;
+    height: 275px;
+    left: 50%;
+    transform: translateX(-50%);
     padding-top: 20px;
+}
+
+.listing-slider-left-arrow, .listing-slider-right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 65px;
+    width: 65px;
+    border-radius: 100%;
+    border: 2px solid #ffffff;
+    background-color: rgba(var(--colors-0-rgb), 0.2);
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+.listing-slider-left-arrow:hover, .listing-slider-right-arrow:hover {
+    background-color: rgba(var(--colors-0-rgb), 0.7);
+}
+
+.listing-slider-left-arrow > span, .listing-slider-right-arrow > span {
+    position: absolute;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.listing-slider-left-arrow {
+    left: 20px;
+}
+
+.listing-slider-right-arrow {
+    right: 20px;
 }
 
 .listing-slider-wrapper {
     display: inline-flex;
     flex-direction: row;
     position: relative;
-    width: 97.5%;
+    width: 100%;
     height: 100%;
     box-shadow: 0px 0px 7px #000000;
+    background-color: var(--colors-0);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     overflow-x: scroll;
     overflow-y: hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.listing-slider-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .embeded-listing {
@@ -30,17 +83,27 @@
     object-fit: cover;
     object-position: 50% 50%;
     width: 100%;
-    height: 85%;
+    height: 80%;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.embeded-listing > .embeded-listing-name {
+.embeded-listing > .embeded-listing-transparent {
+    position: absolute;
+    background-color: rgba(var(--colors-0-rgb), 0.7);
+    height: 15%;
+    width: 100%;
+    bottom: 20%;
+}
+
+.embeded-listing > .embeded-listing-transparent > .embeded-listing-name {
+    font-family: 'Noto Serif Tamil', serif;
+    font-size: 120%;
     position: absolute;
     text-align: center;
-    bottom: 0%;
-    padding: 10px 0px;
+    bottoM: 5px;
     width: 100%;
+    color: #ffffff;
 }
 
 .embeded-listing > a {

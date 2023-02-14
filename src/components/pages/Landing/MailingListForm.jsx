@@ -6,12 +6,15 @@ const MailingListForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
 
+    const handleSubmit = () => {}
+
     return (
         <div className={Styles["mailing-list"]}>
             <div className={Styles["mailing-list-wrapper"]}>
                 <div className={Styles["mailing-list-form-wrapper"]}>
                     <h2>Join Our Mailing List</h2>
-                    <form className={Styles["mailing-list-form"]} method="post">
+                    <iframe name="dummyframe" id="dummyframe" style={{"display": "none"}}></iframe>
+                    <form className={Styles["mailing-list-form"]} method="post" target="dummyframe" onSubmit={() => {window.location.reload()}}>
                         <label for="name">Name</label>
                         <input
                             value={name}
