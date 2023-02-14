@@ -6,6 +6,10 @@ import ListingEmbed from './ListingEmbed.jsx';
 
 import Styles from './ListingSlider.module.css';
 
+function pickClosest(value, a, b) {
+    return Math.abs(value - a) < Math.abs(value - b) ? a : b;
+}
+
 const ListingSlider = (props) => {
     const [data, setData] = useState([]);
 
@@ -21,32 +25,28 @@ const ListingSlider = (props) => {
 
         let lastScroll = new Date();
         let lastClick = new Date();
-        let timer = null;
+        let lastAutoScroll = new Date();
+
+        wrapperRef.current.onwheel = () => { return false; }
 
         wrapperRef.current?.addEventListener("scroll", e => {
-            let maxScroll = (wrapperRef.current.scrollWidth - wrapperRef.current.clientWidth) / 2;
+            let maxScroll = (wrapperRef.current.scrollWidth - wrapperRef.current.clientWidth);
             
             lastScroll = new Date();
             
-            if(wrapperRef.current.scrollLeft / maxScroll > 0.5) {
+            if(wrapperRef.current.scrollLeft > maxScroll - 1) {
                 wrapperRef.current.scrollTo({
                     top: 0, 
                     left: 1,
                     behavior: 'instant'
                 });
-            } else if(wrapperRef.current.scrollLeft < 0.01) {
+            } else if(wrapperRef.current.scrollLeft < 1) {
                 wrapperRef.current.scrollTo({
                     top: 0, 
-                    left: maxScroll * 0.5,
+                    left: maxScroll - wrapperRef.current.clientWidth / 4,
                     behavior: 'instant'
                 });
             }
-
-            if(timer !== null) clearTimeout(timer);  
-            timer = setTimeout(() => {
-                wrapperRef.current.scrollLeft = Math.ceil(wrapperRef.current.scrollLeft / (wrapperRef.current.clientWidth / 4)) * (wrapperRef.current.clientWidth / 4);
-                timer = null;
-            }, 350);
         });
 
         leftButtonRef.current.addEventListener("click", e => {
@@ -54,7 +54,15 @@ const ListingSlider = (props) => {
             lastScroll = new Date();
             lastClick = new Date();
 
-            wrapperRef.current.scrollLeft -= wrapperRef.current.clientWidth / 4 * 2;
+            let maxScroll = (wrapperRef.current.scrollWidth - wrapperRef.current.clientWidth);
+            if(wrapperRef.current.scrollLeft - wrapperRef.current.clientWidth / 4 < 1) {
+                wrapperRef.current.scrollTo({
+                    top: 0, 
+                    left: maxScroll - wrapperRef.current.clientWidth / 4,
+                    behavior: 'instant'
+                });
+            }
+            wrapperRef.current.scrollLeft -= wrapperRef.current.clientWidth / 4;
         });
 
         rightButtonRef.current.addEventListener("click", e => {
@@ -62,14 +70,30 @@ const ListingSlider = (props) => {
             lastScroll = new Date();
             lastClick = new Date();
 
-            wrapperRef.current.scrollLeft += wrapperRef.current.clientWidth / 4 * 2;
+            let maxScroll = (wrapperRef.current.scrollWidth - wrapperRef.current.clientWidth);
+            if(wrapperRef.current.scrollLeft + wrapperRef.current.clientWidth / 4 > maxScroll - 1) {
+                wrapperRef.current.scrollTo({
+                    top: 0, 
+                    left: 1,
+                    behavior: 'instant'
+                });
+            }
+            wrapperRef.current.scrollLeft += wrapperRef.current.clientWidth / 4;
         });
 
         const update = () => {
             if((new Date() - lastScroll) / 1000 > 2.5 && (new Date() - lastClick / 1000 > 5)) {
-                let maxScroll = (wrapperRef.current.scrollWidth - wrapperRef.current.clientWidth) / 2;
+                lastAutoScroll = new Date();
+
+                let maxScroll = (wrapperRef.current.scrollWidth - wrapperRef.current.clientWidth);
+                if(wrapperRef.current.scrollLeft + wrapperRef.current.clientWidth / 4 > maxScroll - 1) {
+                    wrapperRef.current.scrollTo({
+                        top: 0, 
+                        left: 1,
+                        behavior: 'instant'
+                    });
+                }
                 wrapperRef.current.scrollLeft += wrapperRef.current.clientWidth / 4;
-                if(wrapperRef.current.scrollLeft > maxScroll * 0.5) wrapperRef.current.scrollLeft = 0;
             }
 
             setTimeout(update, 3000);
@@ -81,12 +105,12 @@ const ListingSlider = (props) => {
     return (
         <div className={Styles["listing-slider"]}>
             <div className={Styles["listing-slider-wrapper"]} ref={wrapperRef}>
-                {data.concat(data).map((listing) => (
+                {data.concat([data[0], data[1], data[2], data[3], data[4]]).map((listing) => (
                     <ListingEmbed listing={listing} />
                 ))}
             </div>
-            <div className={Styles["listing-slider-left-arrow"]} ref={leftButtonRef}><span>{"<"}</span></div>
-            <div className={Styles["listing-slider-right-arrow"]} ref={rightButtonRef}><span>{">"}</span></div>
+            <button className={Styles["listing-slider-left-arrow"]} ref={leftButtonRef}><span>{"<"}</span></button>
+            <button className={Styles["listing-slider-right-arrow"]} ref={rightButtonRef}><span>{">"}</span></button>
         </div>
     );
 }

@@ -1,3 +1,119 @@
-.section-listings {
-    min-height: 100vh;
+:root {
+    --grid-width: 92.5vw;
+    --grid-columns: 5;
+    --grid-row-height: 400px;
+}
+
+.grid-wrapper {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    width: var(--grid-width);
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    grid-auto-rows: calc(var(--grid-row-height));
+}
+
+.embeded-listing {
+    position: relative;
+}
+
+.embeded-listing > .embeded-listing-image, .embeded-listing-image > .embeded-listing-img-tag {
+    position: absolute;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 10px;
+    background-color: #c9c9c9;
+    width: calc(var(--grid-width) / var(--grid-columns) - 20px);
+    height: calc(var(--grid-width) / var(--grid-columns) - 20px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.embeded-listing-image {
+    top: 10px;
+}
+
+.embeded-listing-heart-svg {
+    position: absolute;
+    width: calc(100px / var(--grid-columns));
+    height: calc(100px / var(--grid-columns));
+    top: 20px;
+    right: 20px;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(29%) saturate(2049%) hue-rotate(6deg) brightness(103%) contrast(76%);
+    cursor: pointer;
+}
+
+.embeded-listing-heart-svg.saved {
+    filter: none;
+}
+
+.embeded-listing > .embeded-listing-name {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    text-align: left;
+    top: calc(20px + calc(var(--grid-width) / var(--grid-columns) - 20px));
+    left: 10px;
+    width: calc(100% - 10px);
+    color: #000000;
+}
+
+.embeded-listing > .embeded-listing-price {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: left;
+    top: calc(45px + calc(var(--grid-width) / var(--grid-columns) - 20px));
+    left: 10px;
+    width: calc(100% - 10px);
+    color: #000000;
+}
+
+.embeded-listing > .embeded-listing-price > span {
+    font-weight: 600;
+}
+
+.embeded-listing > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+}
+
+.out-of-listings {
+    position: relative;
+    height: 300px;
+}
+
+.label-sorry, .label-out-of-listings {
+    font-size: 175px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Tangerine', cursive;
+    text-align: center;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.label-sorry {
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    transform: translate(-50%, -50%);
+}
+
+.label-out-of-listings {
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 165px;
+    transform: translate(-50%, -50%);
 }

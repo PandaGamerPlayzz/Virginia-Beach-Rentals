@@ -37,8 +37,7 @@
                 "single": 4,
                 "bunk_bed": 0,
                 "pullout_sofa": 2
-            },
-            "amenities": ["Game Room", "Grill", "Ocean Front", "WiFi"]
+            }
         }
     },
     {
@@ -79,8 +78,7 @@
                 "single": 0,
                 "bunk_bed": 0,
                 "pullout_sofa": 1
-            },
-            "amenities": ["Pool", "WiFi"]
+            }
         }
     },
     {
@@ -122,8 +120,189 @@
                 "single": 2,
                 "bunk_bed": 0,
                 "pullout_sofa": 1
-            },
-            "amenities": ["WiFi"]
+            }
+        }
+    },
+    {
+        "name": "510 Surfside Ave",
+        "description": "",
+        "url": "https://www.zillow.com/homedetails/510-Surfside-Ave-Virginia-Beach-VA-23451/60756937_zpid/",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=510+Surfside+Ave,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 510,
+            "street_name": "Surfside",
+            "street_type": "Avenue",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://photos.zillowstatic.com/fp/a8cb7ee66c2194edac6c9fbc4c0284f2-cc_ft_1536.webp",
+            "https://photos.zillowstatic.com/fp/e823eaf02b98e0444da48a6d0a50add7-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/151aa1b7fa3f6435bd7fa0cbb39fee4d-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/800c9af489f62b1b5a5c59fa7e3eabdf-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/36f49ce08b39bca5642ecf8675a988cc-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/d2841d08cd7ae76029f37147e1bdace2-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/a67c8f2220b71ea2abfe6713131bc75e-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/7f52b8f2344661be86b34d3ef6916877-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/5163973e6aba1d96e7ede96bdf4dff5f-cc_ft_384.webp"
+        ],
+        "info": {
+            "price_per_night": 840,
+            "bedrooms": 5,
+            "bathrooms": 4,
+            "sqft": 3061,
+            "guests": 7,
+            "beds": {
+                "king": 1,
+                "queen": 3,
+                "full": 1,
+                "single": 0,
+                "bunk_bed": 0,
+                "pullout_sofa": 1
+            }
+        }
+    },
+    {
+        "name": "809 Vanderbilt Ave",
+        "description": "",
+        "url": "https://www.zillow.com/homedetails/809-Vanderbilt-Ave-Virginia-Beach-VA-23451/60756801_zpid/",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=809+Vanderbilt+Ave,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 809,
+            "street_name": "Vanderbilt",
+            "street_type": "Avenue",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://photos.zillowstatic.com/fp/a724322f0ad032aec61d2043edb29405-cc_ft_1536.webp",
+            "https://photos.zillowstatic.com/fp/a724322f0ad032aec61d2043edb29405-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/87f2fb6f7dc884c73e25c7b088c9d258-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/8945eacda7e873b274d6896956a789b0-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/2be45263603b4cefea987ac65997734f-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/048111f122dd015074a5700859ccee79-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/381a6ad666630d405b54f89d645ddf50-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/894896c6452828bc89115f29a6b91452-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/129c78734c66a0007a3ff4b6fcd361ba-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/94e0e321808bb2803997415f45b5d737-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/3b5e0cab7abd330384a43745f77d984e-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/4bb2c01d56fabdd50dfa1c8698051b3d-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/783ac18ce52e885fd98f29cc176d860d-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/e6d2a206d9c64ee3739bc73a78fd2754-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/91ec2051791c5666da344fba0835f526-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/b1e64ab4cf60bb0e93c09538469304ac-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/64e12d2ba10456ac9012a80e45f64c4d-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/99f74e4967a630bc6064bdbe1bfa3c6f-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/2266a2241941c8ea4bf8206fd87b2d0d-cc_ft_384.webp"
+        ],
+        "info": {
+            "price_per_night": 830,
+            "bedrooms": 4,
+            "bathrooms": 4,
+            "sqft": 3700,
+            "guests": 7,
+            "beds": {
+                "king": 1,
+                "queen": 2,
+                "full": 1,
+                "single": 1,
+                "bunk_bed": 0,
+                "pullout_sofa": 1
+            }
+        }
+    },
+    {
+        "name": "115 51st St",
+        "description": "",
+        "url": "https://www.zillow.com/homedetails/115-51st-St-B-Virginia-Beach-VA-23451/60752071_zpid/",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=115+51st+St,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 115,
+            "street_name": "51st",
+            "street_type": "Street",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://photos.zillowstatic.com/fp/558ada9791182d69ffa05f4388f43714-cc_ft_1536.webp",
+            "https://photos.zillowstatic.com/fp/7413063cc1018c79b2b8898687edbbe0-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/1afcf33db7cf353b30aefb60c8e3494a-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/83268496e4a3885762c51efa8522f55f-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/eec2fa54c25bed420599b3290aada4d1-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/721f90662c83ff02611f2322d27a57df-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/f40c706808f667d14e61b7b8f4091546-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/ec6c4ff16954030e0371e5a8a622824e-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/93c97bc9222a5d765a2e1fb6e03f0cd8-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/fe1e9043da313f5075a2f905d264bc87-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/598a56799e4c3bd53337990da5f1086b-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/dd6dd87978283fec50043a8094396ff9-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/9dcd10864df4e59e9fe135c00dc81749-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/069630556c01dd203d6dbc7cc4331c3a-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/e78f8c8f3ba77b2988621441adaae62d-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/41deb5be71e0d2a032da68e482c7a726-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/50b29bb521e6518a0a054f50d41a0d24-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/41b6b933b1f78e0f19e1deb2a57fdd93-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/957a7d19bcad84df5cf7976558743f94-cc_ft_384.webp"
+        ],
+        "info": {
+            "price_per_night": 840,
+            "bedrooms": 3,
+            "bathrooms": 3,
+            "sqft": 1773,
+            "guests": 5,
+            "beds": {
+                "king": 1,
+                "queen": 2,
+                "full": 0,
+                "single": 0,
+                "bunk_bed": 0,
+                "pullout_sofa": 1
+            }
+        }
+    },
+    {
+        "name": "416 Pinewood Dr",
+        "description": "",
+        "url": "https://www.zillow.com/homedetails/416-Pinewood-Dr-Virginia-Beach-VA-23451/60758318_zpid/",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=416+Pinewood+Dr,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 416,
+            "street_name": "Pinewood",
+            "street_type": "Drive",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://photos.zillowstatic.com/fp/9daa8bd04b6b9a490fadc7f888a1b2e3-cc_ft_1536.webp",
+            "https://photos.zillowstatic.com/fp/fbc9dcbc86493b230a9432504bed65b9-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/47883426d749a3b53e61a575f1675e6d-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/b0517597a797434c1c47097e8acce8ac-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/a0b22c410ab23e380a99fe6274fe6968-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/f3ea0e96a35f1c9e1a534673b7b72690-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/6cf2f264af1cddf2598ed712a10ebfd8-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/673ea990d79e832cb1f0815aba2101aa-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/df5d7fa07e2a5acc20842995fa4d8fa6-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/db004d6735819c6675651425ef0cb29c-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/06cf01a06818cd9abc35556898853515-cc_ft_384.webp"
+        ],
+        "info": {
+            "price_per_night": 460,
+            "bedrooms": 3,
+            "bathrooms": 3,
+            "sqft": 2148,
+            "guests": 6,
+            "beds": {
+                "king": 1,
+                "queen": 1,
+                "full": 0,
+                "single": 2,
+                "bunk_bed": 0,
+                "pullout_sofa": 1
+            }
         }
     }
 ]

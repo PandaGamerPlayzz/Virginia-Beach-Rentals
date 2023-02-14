@@ -98,7 +98,7 @@ const Listing = (props) => {
     }, [searchParams]);
 
     const handleOutsideClick = (event) => {
-        if(!listingWrapperRef.current.contains(event.target)) {
+        if(listingWrapperRef.current && !listingWrapperRef.current.contains(event.target)) {
             window.history.back();
         }
     }

@@ -28,8 +28,7 @@
                 "single": 0,
                 "bunk_bed": 0,
                 "pullout_sofa": 0
-            },
-            "amenities": ["WiFi"]
+            }
         }
     }
 ]

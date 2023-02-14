@@ -1,7 +1,12 @@
+.section-404 {
+    height: 100vh;
+}
+
 #label-404, #label-page-not-found {
     font-size: 175px;
     font-family: 'Barlow Condensed', sans-serif;
     font-family: 'Tangerine', cursive;
+    text-align: center;
 
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
