@@ -1,6 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Linkify from 'react-linkify';
+
+import Listings from '../Listings/Listings.jsx';
 
 import Styles from './Listing.module.css';
 
@@ -10,12 +12,17 @@ export function getAllListings() {
     return fetch(`/c/data/listings.json`)
     .then((response) => response.json())
     .then((responseJson) => {
+        let allListings = [];
+
         for(let i = 0; i < responseJson.length; i++) {
             let listing = responseJson[i];
+            listing.id = allListings.length;
             listing.maps_api_url = listing.maps_api_url.replace("{API_KEY}", MAPS_API_KEY);
+
+            if(listing.testing_property !== true) allListings.push(listing);
         }
 
-        return responseJson;
+        return allListings;
     })
     .catch((error) => {
         console.error(error);
@@ -42,6 +49,10 @@ export function getListing(searchTerm) {
     }
 }
 
+export function getTitleImageSrc(listing) {
+    return listing.images[0];
+}
+
 export function getImages(listing) {
     let images = [];
 
@@ -49,7 +60,7 @@ export function getImages(listing) {
         let image;
 
         if(i === 0) {
-            image = <img src={listing.images[i]} className={Styles["title-image"]} alt={""} />;
+            image = <img src={listing.images[0]} className={Styles["title-image"]} alt={""} />;
         } else {
            image = <img src={listing.images[i]} alt={""} />;
         }
@@ -69,6 +80,8 @@ const Listing = (props) => {
 
     useEffect(() => {
         document.addEventListener("click", handleOutsideClick, true);
+
+        if(searchParams.get("lt" == "all")) return;
 
         if(searchParams.has("lt")) {
             let body = document.getElementsByTagName("body")[0];
@@ -93,7 +106,7 @@ const Listing = (props) => {
     return (() => {
         if(!searchParams.has("lt")) return
 
-        if(listing === undefined) {
+        if(listing === undefined && searchParams.get("lt") !== "all") {
             return <>
                 <div id={Styles["blur"]}></div>
                 <section id="section-listing">
@@ -116,7 +129,7 @@ const Listing = (props) => {
                 </section>
             </>
         } else if(searchParams.get("lt") === "all" || props.lt === "all") {
-        
+            return <Listings />
         } else if(searchParams.get("lt") === "modal" || props.lt === "modal") {
             let images = getImages(listing);
 

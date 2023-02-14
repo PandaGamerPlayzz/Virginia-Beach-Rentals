@@ -1,13 +1,14 @@
 [
     {
         "name": "4801 Ocean Front Ave",
+        "testing_property": true,
         "description": "This is a placeholder property",
         "url": "https://www.zillow.com/homedetails/4801-Ocean-Front-Ave-Virginia-Beach-VA-23451/65793214_zpid/",
         "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=4801+Ocean+Front+Ave,+Virginia+Beach,+VA",
         "address": {
             "street_number": 4801,
             "street_name": "Ocean Front",
-            "street_type": "Ave",
+            "street_type": "Avenue",
             "city": "Virginia Beach",
             "state": "Virginia",
             "zipcode": 23451
@@ -38,6 +39,91 @@
                 "pullout_sofa": 2
             },
             "amenities": ["Game Room", "Grill", "Ocean Front", "WiFi"]
+        }
+    },
+    {
+        "name": "8410 Atlantic Ave",
+        "description": "",
+        "url": "https://www.zillow.com/homedetails/8410-Atlantic-Ave-Virginia-Beach-VA-23451/60760623_zpid/",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=8410+Atlantic+Ave,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 8410,
+            "street_name": "Atlantic",
+            "street_type": "Avenue",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://photos.zillowstatic.com/fp/627d8516c1be185963c7644361656079-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/426cfc5c151fa0be46380753a5dca70c-cc_ft_192.webp",
+            "https://photos.zillowstatic.com/fp/d3798b679b9203f334303d782e9639eb-cc_ft_192.webp",
+            "https://photos.zillowstatic.com/fp/792220f8cf77cfa89d2bb46b4c129125-cc_ft_192.webp",
+            "https://photos.zillowstatic.com/fp/b21c37d10bd26d588eda1e15f1d7e6a9-cc_ft_192.webp",
+            "https://photos.zillowstatic.com/fp/d99e3e91726af4ed05781f31d9fa9af4-cc_ft_192.webp",
+            "https://photos.zillowstatic.com/fp/5d7a03d0ddaa6adb9cf370c1914c45cb-cc_ft_192.webp",
+            "https://photos.zillowstatic.com/fp/eeb4fa7d64f33cb0b2208025fa416614-cc_ft_192.webp",
+            "https://photos.zillowstatic.com/fp/b2b03ea068e797bf14a60702910f7fa4-cc_ft_192.webp",
+            "https://photos.zillowstatic.com/fp/6cf1ba527de911dbf21cff1921894034-cc_ft_192.webp"
+        ],
+        "info": {
+            "price_per_night": 980,
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "sqft": 1796,
+            "guests": 5,
+            "beds": {
+                "king": 1,
+                "queen": 2,
+                "full": 0,
+                "single": 0,
+                "bunk_bed": 0,
+                "pullout_sofa": 1
+            },
+            "amenities": ["Pool", "WiFi"]
+        }
+    },
+    {
+        "name": "2302 Mediterranean Ave",
+        "description": "",
+        "url": "https://www.zillow.com/homedetails/2302-Mediterranean-Ave-Virginia-Beach-VA-23451/60750164_zpid/?",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=2302+Mediterranean+Ave,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 2302,
+            "street_name": "Mediterranean",
+            "street_type": "Avenue",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://photos.zillowstatic.com/fp/d0a04b6db3e62918835935686c999cfe-cc_ft_1536.webp",
+            "https://photos.zillowstatic.com/fp/facb96b62b9849396d7724c050272789-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/b9f35fac8fa25ec2e30a1314140e02b6-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/29207fc515ff2dea5df864c24c1a41d3-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/e7511da91897d88d8907af20e7bfaf25-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/62aea3f32407eebd3e933540cea46861-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/e55ea6ff57c3c163dd3ae0406fb03f49-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/0f9cdbd08c7c413c03e1485620b817ad-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/fc6f35729a0c4cbfdc92782042da3c0e-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/4cb1e778034e97ac5a3db643e621b4c6-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/f9f3fcc309e5d12215282b45770b602d-cc_ft_384.webp"
+        ],
+        "info": {
+            "price_per_night": 440,
+            "bedrooms": 3,
+            "bathrooms": 4,
+            "sqft": 1732,
+            "guests": 6,
+            "beds": {
+                "king": 0,
+                "queen": 3,
+                "full": 0,
+                "single": 2,
+                "bunk_bed": 0,
+                "pullout_sofa": 1
+            },
+            "amenities": ["WiFi"]
         }
     }
 ]

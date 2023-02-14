@@ -6,7 +6,7 @@
 
 .listing-search-options-wrapper {
     position: relative;
-    width: 90%;
+    width: 97.5%;
     height: 100%;
     box-shadow: 0px 0px 7px #000000;
     left: 50%;
@@ -52,7 +52,7 @@
 
 .listing-search-options-form > button {
     color: #ffffff;
-    background-color: #0F3141;
+    background-color: var(--colors-0);
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 500;

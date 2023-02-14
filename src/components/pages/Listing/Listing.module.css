@@ -66,6 +66,8 @@
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
+    animation: fadeIn 1s;
+    opacity: 1;
 
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -73,4 +75,14 @@
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+       opacity: 1;
+    }
 }

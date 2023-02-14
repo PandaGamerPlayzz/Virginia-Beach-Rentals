@@ -1,7 +1,7 @@
 .nav-bar, .nav-bar-blank {
     width: 100vw;
     height: var(--nav-height);
-    background-color: #0F3141;
+    background-color: var(--colors-0);
     box-shadow: 0 0 25px rgb(10 36 88 / 25%);
 }
 

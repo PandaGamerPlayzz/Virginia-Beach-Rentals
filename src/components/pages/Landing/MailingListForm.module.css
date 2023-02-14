@@ -6,7 +6,7 @@
 
 .mailing-list-wrapper {
     position: relative;
-    width: 90%;
+    width: 97.5%;
     height: 100%;
     box-shadow: 0px 0px 7px #000000;
     left: 50%;
@@ -15,9 +15,8 @@
 }
 
 .mailing-list-form-wrapper {
-    position: absolute;
-    width: 55%;
-    height: 90%;
+    position: relative;
+    width: 50%;
     right: 20px;
     top: 50%;
     left: 50%;
@@ -47,7 +46,7 @@
 
 .mailing-list-form > button {
     color: #ffffff;
-    background-color: #0F3141;
+    background-color: var(--colors-0);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;

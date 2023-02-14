@@ -1,0 +1,35 @@
+[
+    {
+        "name": "",
+        "description": "",
+        "url": "",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=1234+Street+Type,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 0,
+            "street_name": "",
+            "street_type": "",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            
+        ],
+        "info": {
+            "price_per_night": 0,
+            "bedrooms": 0,
+            "bathrooms": 0,
+            "sqft": 0,
+            "guests": 0,
+            "beds": {
+                "king": 0,
+                "queen": 0,
+                "full": 0,
+                "single": 0,
+                "bunk_bed": 0,
+                "pullout_sofa": 0
+            },
+            "amenities": ["WiFi"]
+        }
+    }
+]
