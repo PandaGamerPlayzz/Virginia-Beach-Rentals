@@ -26,7 +26,7 @@ const ListingEmbed = (props) => {
             <h1 className={Styles["embeded-listing-name"]}>{props.listing.name}</h1>
             <h2 className={Styles["embeded-listing-price"]}><span>{`$${props.listing.info.price_per_night}`}</span> {"per night"}</h2>
             <a href={`/listings/?lt=modal&id=${props.listing.id}`}></a>
-            <img ref={heartRef} className={`${Styles["embeded-listing-heart-svg"]} ${cookies['saved-listings'] && cookies['saved-listings'][props.listing.name] === true ? Styles["saved"] : ""}`} src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg" alt={""} onClick={() => {
+            <img ref={heartRef} className={`${Styles["embeded-listing-heart-svg"]} ${cookies['saved-listings'] && cookies['saved-listings'][props.listing.name] === true ? Styles["saved"] : ""}`} src="/c/img/Heart.svg" alt={""} onClick={() => {
                 heartRef.current.classList.toggle(Styles["saved"]);
 
                 let savedListings = JSON.parse(JSON.stringify(cookies['saved-listings']));

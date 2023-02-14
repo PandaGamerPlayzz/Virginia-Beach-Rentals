@@ -304,5 +304,55 @@
                 "pullout_sofa": 1
             }
         }
+    },
+    {
+        "name": "400 Rudee Point Rd APT 302",
+        "description": "",
+        "url": "https://www.zillow.com/homedetails/400-Rudee-Point-Rd-APT-302-Virginia-Beach-VA-23451/60758516_zpid/?",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=400+Rudee+Point+Rd+APT+302,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 400,
+            "street_name": "Rudee Point",
+            "street_type": "Road",
+            "apartment_number": 302,
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://photos.zillowstatic.com/fp/28bfe222476e0ceb2925a517efb2ce04-d_d.webp",
+            "https://photos.zillowstatic.com/fp/111c89feb0d5df80722203f0e9ff96d8-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/8364a6ddb01dcf0a04b1b121ef1482a9-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/deac9c94f4b063809936ce2f70e6b0e1-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/98c56fe1b34c3bb688f3c26c6231b321-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/ebb7babe215297606e1e6bcbca0081e4-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/1683890fdd9bab882fc72da3ea4cd436-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/77f8fd520612c1bf5806c4c35c6bf456-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/9cf649e3c5a92e761d4077fb240ca82b-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/7d286e0c2bf686aaab95c6656bb96cd8-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/d04e0b26366f91bdb11323d7ff4cfbd9-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/032681f3f1fed1f22146ebf9f8ccc568-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/3c4179540835097c877cc1a6d11a49c0-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/8518fae84f278b490a094251e71e1bf8-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/078b12ceeaf046c07c33b6db4d703917-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/d932c054661c029b4822bbce1aa8e222-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/9c26df1caa681aeeec6cd6e9b394d454-cc_ft_768.webp",
+            "https://photos.zillowstatic.com/fp/228ac1c349c26b65f2ef62831069cafc-cc_ft_768.webp"
+        ],
+        "info": {
+            "price_per_night": 380,
+            "bedrooms": 2,
+            "bathrooms": 2,
+            "sqft": 1460,
+            "guests": 3,
+            "beds": {
+                "king": 0,
+                "queen": 2,
+                "full": 0,
+                "single": 0,
+                "bunk_bed": 0,
+                "pullout_sofa": 1
+            }
+        }
     }
 ]
