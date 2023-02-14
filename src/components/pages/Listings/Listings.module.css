@@ -1,7 +1,6 @@
 :root {
     --grid-width: 92.5vw;
     --grid-columns: 5;
-    --grid-row-height: 400px;
 }
 
 .grid-wrapper {
@@ -11,15 +10,16 @@
     display: grid;
     width: var(--grid-width);
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    grid-auto-rows: calc(var(--grid-row-height));
+    grid-auto-rows: max-content;
 }
 
 .embeded-listing {
     position: relative;
+    padding-bottom: 70px;
 }
 
 .embeded-listing > .embeded-listing-image, .embeded-listing-image > .embeded-listing-img-tag {
-    position: absolute;
+    position: relative;
     object-fit: cover;
     object-position: 50% 50%;
     border-radius: 10px;
@@ -86,7 +86,7 @@
 
 .out-of-listings {
     position: relative;
-    height: 300px;
+    height: 365px;
 }
 
 .label-sorry, .label-out-of-listings {
@@ -106,7 +106,7 @@
 .label-sorry {
     position: absolute;
     left: 50%;
-    top: 35px;
+    top: 115px;
     transform: translate(-50%, -50%);
 }
 
@@ -114,6 +114,6 @@
     font-size: 60px;
     position: absolute;
     left: 50%;
-    top: 165px;
+    top: 245px;
     transform: translate(-50%, -50%);
 }
