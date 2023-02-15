@@ -38,6 +38,12 @@ const Listings = () => {
             <section id="section-listing-search-options">
                 <ListingSearchOptions />
             </section>
+            <section id="section-found-listings" className={Styles["section-found-listings"]}>
+                <h1>{
+                    data.length > 0 ? `We found ${data.length} ${data.length === 1 ? "listing" : "listings"} that ${data.length === 1 ? "is" : "are"} perfect for you`
+                    : `Sorry, but we couldn't find any listings that are fit for you`
+                }</h1>
+            </section>
             <section id="section-listings" className={Styles["section-listings"]}>
                 <div className="controls-wrapper">
 

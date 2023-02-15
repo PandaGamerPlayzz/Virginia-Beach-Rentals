@@ -1,49 +1,10 @@
 [
     {
-        "name": "4801 Ocean Front Ave",
-        "testing_property": true,
-        "description": "This is a placeholder property",
-        "url": "https://www.zillow.com/homedetails/4801-Ocean-Front-Ave-Virginia-Beach-VA-23451/65793214_zpid/",
-        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=4801+Ocean+Front+Ave,+Virginia+Beach,+VA",
-        "address": {
-            "street_number": 4801,
-            "street_name": "Ocean Front",
-            "street_type": "Avenue",
-            "city": "Virginia Beach",
-            "state": "Virginia",
-            "zipcode": 23451
-        },
-        "images": [
-            "https://photos.zillowstatic.com/fp/1be157563ce5c168ea6dd707ef4790f0-cc_ft_1536.webp",
-            "https://photos.zillowstatic.com/fp/0f9bde226140afe7d309f9f3970b8907-cc_ft_384.webp",
-            "https://photos.zillowstatic.com/fp/671842852f820f16c99824b21dd999e8-cc_ft_384.webp",
-            "https://photos.zillowstatic.com/fp/ce5b8602681468b7883b3d60a9b5bef8-cc_ft_384.webp",
-            "https://photos.zillowstatic.com/fp/7391ff9bab027477edd187839e2e6740-cc_ft_384.webp",
-            "https://photos.zillowstatic.com/fp/a7e27aa38a6e81222c821296b889800a-cc_ft_384.webp",
-            "https://photos.zillowstatic.com/fp/974c00871d683100a2e5412bdfbc73df-cc_ft_384.webp",
-            "https://photos.zillowstatic.com/fp/b167aea80a78bd85ceed6cb910057bbb-cc_ft_384.webp",
-            "https://photos.zillowstatic.com/fp/9079ee2a431def0e85d31a74e553284f-cc_ft_384.webp"
-        ],
-        "info": {
-            "price_per_night": 999,
-            "bedrooms": 5,
-            "bathrooms": 5,
-            "sqft": 5660,
-            "guests": 10,
-            "beds": {
-                "king": 1,
-                "queen": 2,
-                "full": 0,
-                "single": 4,
-                "bunk_bed": 0,
-                "pullout_sofa": 2
-            }
-        }
-    },
-    {
         "name": "8410 Atlantic Ave",
         "description": "",
         "url": "https://www.zillow.com/homedetails/8410-Atlantic-Ave-Virginia-Beach-VA-23451/60760623_zpid/",
+        "author": "Monika Doyle",
+        "last_updated": "23 Jan. 2023",
         "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=8410+Atlantic+Ave,+Virginia+Beach,+VA",
         "address": {
             "street_number": 8410,
@@ -85,6 +46,8 @@
         "name": "2302 Mediterranean Ave",
         "description": "",
         "url": "https://www.zillow.com/homedetails/2302-Mediterranean-Ave-Virginia-Beach-VA-23451/60750164_zpid/?",
+        "author": "Sean McPherson",
+        "last_updated": "11 Feb. 2023",
         "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=2302+Mediterranean+Ave,+Virginia+Beach,+VA",
         "address": {
             "street_number": 2302,
@@ -127,6 +90,8 @@
         "name": "510 Surfside Ave",
         "description": "",
         "url": "https://www.zillow.com/homedetails/510-Surfside-Ave-Virginia-Beach-VA-23451/60756937_zpid/",
+        "author": "Debbie Childs",
+        "last_updated": "15 Feb. 2023",
         "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=510+Surfside+Ave,+Virginia+Beach,+VA",
         "address": {
             "street_number": 510,
@@ -167,6 +132,8 @@
         "name": "809 Vanderbilt Ave",
         "description": "",
         "url": "https://www.zillow.com/homedetails/809-Vanderbilt-Ave-Virginia-Beach-VA-23451/60756801_zpid/",
+        "author": "Debbie Woolard",
+        "last_updated": "13 Feb. 2023",
         "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=809+Vanderbilt+Ave,+Virginia+Beach,+VA",
         "address": {
             "street_number": 809,
@@ -217,6 +184,8 @@
         "name": "115 51st St",
         "description": "",
         "url": "https://www.zillow.com/homedetails/115-51st-St-B-Virginia-Beach-VA-23451/60752071_zpid/",
+        "author": "Robert Ramey",
+        "last_updated": "12 Feb. 2023",
         "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=115+51st+St,+Virginia+Beach,+VA",
         "address": {
             "street_number": 115,
@@ -267,6 +236,8 @@
         "name": "416 Pinewood Dr",
         "description": "",
         "url": "https://www.zillow.com/homedetails/416-Pinewood-Dr-Virginia-Beach-VA-23451/60758318_zpid/",
+        "author": "Michael Karlins",
+        "last_updated": "10 Feb. 2023",
         "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=416+Pinewood+Dr,+Virginia+Beach,+VA",
         "address": {
             "street_number": 416,
@@ -309,6 +280,8 @@
         "name": "400 Rudee Point Rd APT 302",
         "description": "",
         "url": "https://www.zillow.com/homedetails/400-Rudee-Point-Rd-APT-302-Virginia-Beach-VA-23451/60758516_zpid/?",
+        "author": "Debbie Blackledge",
+        "last_updated": "23 Jan. 2023",
         "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=400+Rudee+Point+Rd+APT+302,+Virginia+Beach,+VA",
         "address": {
             "street_number": 400,
@@ -352,6 +325,139 @@
                 "single": 0,
                 "bunk_bed": 0,
                 "pullout_sofa": 1
+            }
+        }
+    },
+    {
+        "name": "7605 Atlantic Ave",
+        "description": "",
+        "url": "https://www.zillow.com/homedetails/7605-Atlantic-Ave-Virginia-Beach-VA-23451/60753494_zpid/",
+        "author": "John Powers",
+        "last_updated": "12 Feb. 2023",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=7605+Atlantic+Ave,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 7605,
+            "street_name": "Atlantic",
+            "street_type": "Avenue",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://photos.zillowstatic.com/fp/7da78d22da0fc68f95efd7d362d056be-uncropped_scaled_within_1536_1152.webp",
+            "https://photos.zillowstatic.com/fp/0abf182cc612bfa4f4cb95c310725776-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/ed904deca3e8ae8e9299d783c48b88fc-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/749d156ac735af35303416181ed79ac6-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/8a7308c758e05c3d1a09c5589ebc86ee-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/44021ae9b9231ecad442347d3872fb02-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/2a3a6639ae4a853d9833b890bf9c7c81-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/5f62964087eff902816f6b4764525c2e-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/ffb9b6a0f0f58388bf0f8b32de0e253b-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/9df0d56525c0168c7de8831c848292bd-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/aa1ba4924254470716f3da8d52e0d70b-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/797cd0179a1cf297e45838c478221a1c-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/b19603eb47c66aac6ab808dd973206d2-cc_ft_384.webp"
+        ],
+        "info": {
+            "price_per_night": 800,
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "sqft": 3203,
+            "guests": 6,
+            "beds": {
+                "king": 1,
+                "queen": 2,
+                "full": 0,
+                "single": 2,
+                "bunk_bed": 0,
+                "pullout_sofa": 1
+            }
+        }
+    },
+    {
+        "name": "2272 Cape Arbor Dr",
+        "description": "",
+        "url": "https://www.zillow.com/homedetails/2272-Cape-Arbor-Dr-Virginia-Beach-VA-23451/60722093_zpid/",
+        "author": "Cristen Treu",
+        "last_updated": "5 Feb. 2023",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=2272+Cape+Abor+Dr,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 2272,
+            "street_name": "Cape Abor",
+            "street_type": "Drive",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://photos.zillowstatic.com/fp/d6cd642e755eee1b1254c165557478c0-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/40b8a91d346fce0ad12ae476ae1885d1-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/42eef5568b6e0edfb26467457d95d111-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/307010ba5b3b3cd5f6280bddd367e928-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/16f85191459d487d485d64482737d870-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/c1bc3b80820cd3f02e8e7a003f1c4b05-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/04360a2d7581e7b40d037747ba5f2625-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/e7cc92fbe7b989acf09fe2b0140e3fa4-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/d14d5d79361429d5e9414b0b4fbc9143-cc_ft_384.webp"
+        ],
+        "info": {
+            "price_per_night": 350,
+            "bedrooms": 4,
+            "bathrooms": 3,
+            "sqft": 2336,
+            "guests": 4,
+            "beds": {
+                "king": 0,
+                "queen": 3,
+                "full": 1,
+                "single": 0,
+                "bunk_bed": 0,
+                "pullout_sofa": 0
+            }
+        }
+    },
+    {
+        "name": "2235 Mooring Pl",
+        "description": "",
+        "url": "https://www.zillow.com/homedetails/2325-Mooring-Pl-1-Virginia-Beach-VA-23451/2106041522_zpid/",
+        "author": "James Westcott",
+        "last_updated": "10 Feb. 2023",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=2235+Morring+Pl,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 2235,
+            "street_name": "Morring",
+            "street_type": "Place",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://photos.zillowstatic.com/fp/291ccddc8e29b2b8d8285cec8045ed5a-cc_ft_1536.webp",
+            "https://photos.zillowstatic.com/fp/0d70e717b25e66ad6d1cd1f0c31ae7f7-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/ecb76b6eb3590abecdf8cdada08fe96e-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/570dd5f658adc305ae86d5c2aee4c1fb-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/346aa90a13f51445f6e5f43b3e84e0e1-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/1320039da30222cd4c8d2a15d8d18a5a-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/fef774fe6a7024d6e8d9846c78495d63-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/3234ece2cec1d01208035e6fbcaab4ab-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/58cb6e4508f878058b728e00c27b12e1-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/edb050670415cea82ad6c11731933671-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/cf543c783740b604b6b55342804b8c85-cc_ft_384.webp",
+            "https://photos.zillowstatic.com/fp/bd201dc461480d23b32fb0f3f5c33f24-cc_ft_384.webp"
+        ],
+        "info": {
+            "price_per_night": 380,
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "sqft": 1516,
+            "guests": 5,
+            "beds": {
+                "king": 0,
+                "queen": 3,
+                "full": 0,
+                "single": 0,
+                "bunk_bed": 0,
+                "pullout_sofa": 2
             }
         }
     }
