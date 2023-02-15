@@ -24,7 +24,8 @@ const ListingEmbed = (props) => {
                 <img className={Styles["embeded-listing-img-tag"]} src={getTitleImageSrc(props.listing)} alt={""} />
             </div>
             <h1 className={Styles["embeded-listing-name"]}>{props.listing.name}</h1>
-            <h2 className={Styles["embeded-listing-price"]}><span>{`$${props.listing.info.price_per_night}`}</span> {"per night"}</h2>
+            <h2 className={Styles["embeded-listing-guests"]}>{"up to"} <span className={Styles["bold"]}>{`${props.listing.info.guests}`}</span> {"guests"}</h2>
+            <h2 className={Styles["embeded-listing-price"]}><span className={Styles["bold"]}>{`$${props.listing.info.price_per_night}`}</span> {"per night"}</h2>
             <a href={`/listings/?lt=modal&id=${props.listing.id}`}></a>
             <img ref={heartRef} className={`${Styles["embeded-listing-heart-svg"]} ${cookies['saved-listings'] && cookies['saved-listings'][props.listing.name] === true ? Styles["saved"] : ""}`} src="/c/img/Heart.svg" alt={""} onClick={() => {
                 heartRef.current.classList.toggle(Styles["saved"]);

@@ -6,7 +6,35 @@ import Listings from '../Listings/Listings.jsx';
 
 import Styles from './Listing.module.css';
 
-const MAPS_API_KEY = "AIzaSyBm-hjwwdTR9YYWlVzSKsMPwl7n8IrLr5I";
+const MAPS_API_KEY = 'AIzaSyBm-hjwwdTR9YYWlVzSKsMPwl7n8IrLr5I';
+
+export function sortListings(listings, sortBy, target) {
+    let sortedListings = listings.sort((listingA, listingB) => {
+        if(sortBy === undefined || target === undefined) {
+            return 0;
+        } else if(sortBy.toLowerCase() === 'price') {
+            return Math.abs(target - listingA.info.price_per_night) < Math.abs(target - listingB.info.price_per_night) ? -1 : 1;
+        } else if(sortBy.toLowerCase() === 'guests') {
+            return Math.abs(target - listingA.info.guests) < Math.abs(target - listingB.info.guests) ? 1 : -1;
+        }
+
+        return 0;
+    });
+
+    return sortedListings;
+}
+
+export function filterListings(cookies, listings, filterParams) {
+    let filteredListings = listings.filter(listing => {
+        return !(
+            (filterParams['saved'] === true && cookies['saved-listings'][listing.name] !== true) ||
+            (filterParams['guests'] !== false && listing.info.guests < filterParams['guests']) ||
+            (filterParams['maxprice'] !== false && listing.info.price_per_night > filterParams['maxprice'])
+        );
+    });
+
+    return filteredListings;
+}
 
 export function getAllListings() {
     return fetch(`/c/data/listings.json`)
@@ -17,7 +45,7 @@ export function getAllListings() {
         for(let i = 0; i < responseJson.length; i++) {
             let listing = responseJson[i];
             listing.id = allListings.length;
-            listing.maps_api_url = listing.maps_api_url.replace("{API_KEY}", MAPS_API_KEY);
+            listing.maps_api_url = listing.maps_api_url.replace('{API_KEY}', MAPS_API_KEY);
 
             if(listing.testing_property !== true) allListings.push(listing);
         }

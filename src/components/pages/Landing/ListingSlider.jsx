@@ -50,7 +50,7 @@ const ListingSlider = (props) => {
         });
 
         leftButtonRef.current.addEventListener("click", e => {
-            if((new Date() - lastScroll) / 1000 < 1) return;
+            if((new Date() - lastScroll) / 1000 < 0.3) return;
             lastScroll = new Date();
             lastClick = new Date();
 
@@ -66,7 +66,7 @@ const ListingSlider = (props) => {
         });
 
         rightButtonRef.current.addEventListener("click", e => {
-            if((new Date() - lastScroll) / 1000 < 1) return;
+            if((new Date() - lastScroll) / 1000 < 0.3) return;
             lastScroll = new Date();
             lastClick = new Date();
 
@@ -93,7 +93,11 @@ const ListingSlider = (props) => {
                         behavior: 'instant'
                     });
                 }
-                wrapperRef.current.scrollLeft += wrapperRef.current.clientWidth / 4;
+                wrapperRef.current.scrollLeft = pickClosest(
+                    wrapperRef.current.scrollLeft + wrapperRef.current.clientWidth / 4,
+                    Math.floor((wrapperRef.current.scrollLeft + wrapperRef.current.clientWidth / 4) / (wrapperRef.current.clientWidth / 4)) * (wrapperRef.current.clientWidth / 4),
+                    Math.ceil((wrapperRef.current.scrollLeft + wrapperRef.current.clientWidth / 4) / (wrapperRef.current.clientWidth / 4)) * (wrapperRef.current.clientWidth / 4)
+                );
             }
 
             setTimeout(update, 3000);
