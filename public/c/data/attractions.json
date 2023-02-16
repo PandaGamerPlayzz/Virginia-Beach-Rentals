@@ -1,0 +1,47 @@
+[    
+    {
+        "name": "Neptune's Park",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=3001+Atlantic+Ave,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 3001,
+            "street_name": "Atlantic",
+            "street_type": "Avenue",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_860,q_75,w_1000/https://assets.simpleviewinc.com/simpleview/image/upload/crm/virginiabeachva/Beaches---Oceanfront-Resort-Beach---Oceanfront-Resort-Beach-20---Neptune-Sunrise-2-of-2-.jpg-4f8caec85056a36_4f8cb691-5056-a36a-0888f0452a057e49.jpg"
+        ]
+    },
+    {
+        "name": "Virginia Aquarium & Marine Science Center",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=717+General+Booth+Blvd,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 717,
+            "street_name": "General Booth",
+            "street_type": "Boulevard",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://www.virginiaaquarium.com/assets/Images/PlanVisit/Hours-and-Maps/North-Building-Front.jpg"
+        ]
+    },
+    {
+        "name": "Grommet Island Park",
+        "maps_api_url": "https://www.google.com/maps/embed/v1/place?key={API_KEY}&q=Grommet+Island+Park,+Virginia+Beach,+VA",
+        "address": {
+            "street_number": 717,
+            "street_name": "Boardwalk &, 2nd",
+            "street_type": "Street",
+            "city": "Virginia Beach",
+            "state": "Virginia",
+            "zipcode": 23451
+        },
+        "images": [
+            "https://wplsite.com/wp-content/uploads/2017/07/Grommet-Island-View_optimized-940-400-1.jpg"
+        ]
+    }
+]

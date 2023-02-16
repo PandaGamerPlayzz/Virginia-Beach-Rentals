@@ -6,6 +6,7 @@ import Page404 from './components/pages/Page404/Page404.jsx';
 import Landing from './components/pages/Landing/Landing.jsx';
 import Listing from './components/pages/Listing/Listing.jsx';
 import Listings from './components/pages/Listings/Listings.jsx';
+import Attractions from './components/pages/Attractions/Attractions.jsx';
 import Book from './components/pages/Book/Book.jsx';
 
 export const AnimatedRoutes = () => {
@@ -16,6 +17,7 @@ export const AnimatedRoutes = () => {
             <Route path="" element={<Landing />} />
             <Route path="listing" element={<Listing />} />
             <Route path="listings" element={<Listings />} />
+            <Route path="attractions" element={<Attractions />} />
             <Route path="book" element={<Book />} />
             <Route path="*" element={<Page404 />} />
         </Routes>

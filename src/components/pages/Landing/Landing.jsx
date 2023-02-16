@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import Listing from '../Listing/Listing.jsx';
 import ListingSearhOptions from './ListingSearchOptions.jsx';
 import ListingSlider from './ListingSlider.jsx';
+import SeeOurAttractions from './SeeOurAttractions.jsx';
 import MailingListForm from './MailingListForm.jsx';
 
 import Styles from './Landing.module.css';
@@ -21,6 +22,7 @@ const Landing = () => {
                 <div id={Styles["landing-wrapper"]}>
                     <ListingSearhOptions />
                     <ListingSlider />
+                    <SeeOurAttractions />
                     <MailingListForm />
                 </div>
             </section>

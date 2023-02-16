@@ -85,7 +85,6 @@ const Book = () => {
                             value={cardNumber}
                             onChange={e => setCardNumber(e.target.value)}
                             type="number"
-                            required
                         />
                     </div>
                     <div className={`${Styles["expiration-date"]} ${Styles["input"]}`}>
@@ -94,7 +93,6 @@ const Book = () => {
                             value={expirationDate}
                             onChange={e => setExpirationDate(e.target.value)}
                             type="month"
-                            required
                         />
                     </div>
                     <div className={`${Styles["cvv"]} ${Styles["input"]}`}>
@@ -103,7 +101,6 @@ const Book = () => {
                             value={cvv}
                             onChange={e => setCvv(e.target.value)}
                             type="number"
-                            required
                         />
                     </div>
                     <div className={`${Styles["zip"]} ${Styles["input"]}`}>
@@ -112,7 +109,6 @@ const Book = () => {
                             value={zip}
                             onChange={e => setZip(e.target.value)}
                             type="number"
-                            required
                         />
                     </div>
                     <div className={`${Styles["name-on-card"]} ${Styles["input"]}`}>
@@ -121,7 +117,6 @@ const Book = () => {
                             value={nameOnCard}
                             onChange={e => setNameOnCard(e.target.value)}
                             type="text"
-                            required
                         />
                     </div>
                 </form>

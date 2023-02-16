@@ -35,6 +35,47 @@ export function filterListings(cookies, listings, filterParams) {
     return filteredListings;
 }
 
+export function getAllAttractions() {
+    return fetch(`/c/data/attractions.json`)
+    .then((response) => response.json())
+    .then((responseJson) => {
+        let allAttractions = [];
+
+        for(let i = 0; i < responseJson.length; i++) {
+            let attraction = responseJson[i];
+            attraction.id = allAttractions.length;
+            attraction.maps_api_url = attraction.maps_api_url.replace('{API_KEY}', MAPS_API_KEY);
+
+            if(attraction.testing_property !== true) allAttractions.push(attraction);
+        }
+
+        return allAttractions;
+    })
+    .catch((error) => {
+        console.error(error);
+    });
+}
+
+export function getAttraction(searchTerm) {
+    if(!isNaN(searchTerm) && !isNaN(parseFloat(searchTerm))) {
+        return getAllAttractions().then((allAttractions) => {
+            return allAttractions[searchTerm];
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    } else {
+        return getAllAttractions().then((allAttractions) => {
+            for(let attraction of allAttractions) {
+                if(attraction.name.toLowerCase() === searchTerm.toLowerCase()) return attraction;
+            }
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    }
+}
+
 export function getAllListings() {
     return fetch(`/c/data/listings.json`)
     .then((response) => response.json())
@@ -117,11 +158,19 @@ const Listing = (props) => {
 
         let term = searchParams.get("name") || searchParams.get("id")
 
-        getListing(term).then((listingResult) => {
-            if(searchParams.has("name") && listingResult.name !== searchParams.get("name")) return;
-
-            setListing(listingResult);
-        });
+        if(searchParams.has("lt") && searchParams.get("lt") === "modal-attraction") {
+            getAttraction(term).then((attractionResult) => {
+                if(searchParams.has("name") && attractionResult.name !== searchParams.get("name")) return;
+    
+                setListing(attractionResult);
+            });
+        } else {
+            getListing(term).then((listingResult) => {
+                if(searchParams.has("name") && listingResult.name !== searchParams.get("name")) return;
+    
+                setListing(listingResult);
+            });
+        }
     }, [searchParams]);
 
     const handleOutsideClick = (event) => {
@@ -226,6 +275,34 @@ const Listing = (props) => {
                             <h2>Check Availability</h2>
                             <hr />
                             <ListingSearchOptions listingId={listing.id} />
+                        </div>
+                    </div>
+                </section>
+            </>
+        } else if(searchParams.get("lt") === "modal-attraction" || props.lt === "modal") {
+            let images = getImages(listing);
+
+            return <>
+                <div id={Styles["blur"]}></div>
+                <section id="section-listing">
+                    <div id={Styles["listing-wrapper"]} ref={listingWrapperRef}>
+                        <div id={Styles["listing-images-wrapper"]}>
+                            {images.slice(0, 1)}
+                            <iframe src={listing.maps_api_url} id={Styles["google-maps-iframe"]} title="google-maps-iframe" style={{border: '0'}} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"></iframe>
+                            {images.slice(1)}
+                        </div>
+                        <div id={Styles["listing-information-wrapper"]}>
+                            <h2>Address</h2>
+                            <hr />
+                            <p>
+                                {`${listing.address.street_number} ${listing.address.street_name} ${listing.address.street_type}`}
+                                <br/>
+                                {`${listing.address.apartment_number !== undefined ? `Apartment ${listing.address.apartment_number}` : ''}`}
+                                {(() => {
+                                    return listing.address.apartment_number !== undefined ? (<br />) : undefined;
+                                })()}
+                                {`${listing.address.city}, ${listing.address.state} ${listing.address.zipcode}`}
+                            </p>
                         </div>
                     </div>
                 </section>
