@@ -6,7 +6,7 @@ import Page404 from './components/pages/Page404/Page404.jsx';
 import Landing from './components/pages/Landing/Landing.jsx';
 import Listing from './components/pages/Listing/Listing.jsx';
 import Listings from './components/pages/Listings/Listings.jsx';
-import Cart from './components/pages/Cart/Cart.jsx';
+import Book from './components/pages/Book/Book.jsx';
 
 export const AnimatedRoutes = () => {
     const location = useLocation();
@@ -16,7 +16,7 @@ export const AnimatedRoutes = () => {
             <Route path="" element={<Landing />} />
             <Route path="listing" element={<Listing />} />
             <Route path="listings" element={<Listings />} />
-            <Route path="cart" element={<Cart />} />
+            <Route path="book" element={<Book />} />
             <Route path="*" element={<Page404 />} />
         </Routes>
     );

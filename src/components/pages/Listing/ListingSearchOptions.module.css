@@ -1,14 +1,16 @@
 .listing-search-options {
+    position: relative;
     width: 100%;
     height: 130px;
-    padding-top: 20px;
+    padding-top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .listing-search-options-wrapper {
     position: relative;
     width: 97.5%;
     height: 100%;
-    box-shadow: 0px 0px 7px #000000;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -22,19 +24,21 @@
     transform: translate(-50%, -50%);
 }
 
-.listing-search-options-form > *, .check-in-check-out > * {
+.check-in-check-out > * {
     display: inline-block;
     margin: 0px 10px;
 }
 
-.check-in-check-out, .num-guests, .max-price, .saved-only {
+.check-in-check-out {
     position: relative;
     border: 1px solid #d4d4d4;
     padding: 17px 30px;
     min-height: 23px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
-.check-in-check-out h2, .num-guests h2, .max-price h2, .saved-only h2 {
+.check-in-check-out h2 {
     position: absolute;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -44,53 +48,25 @@
     transform: translate(0%, -50%);
 }
 
-.num-guests h2, .max-price h2, .saved-only h2 {
-    width: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.num-guests, .max-price {
-    width: 80px;
-}
-
-.saved-only {
-    transform: translateY(23px);
-    width: 50px;
-}
-
-.max-price > span {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    position: absolute;
-    right: calc(100% - 30px);
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .check-in-check-out input, .check-in-check-out span, .num-guests > input, .max-price > input {
-    font-size: 20px;
+    position: relative;
+    font-size: 15px;
 }
 
-.num-guests > input, .max-price > input, .saved-only > input {
+.num-guests > input {
     width: 100%;
     height: 100%;
 }
 
-.saved-only > input {
-    position: absolute;
-    height: 30px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .listing-search-options-form > button {
+    position: relative;
     color: #ffffff;
     background-color: var(--colors-0);
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 500;
+    margin-top: 25px;
     padding: 17px 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }

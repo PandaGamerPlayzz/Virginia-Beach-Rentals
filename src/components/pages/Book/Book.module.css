@@ -1,0 +1,63 @@
+.section-book {
+    min-height: 100vh;
+}
+
+.book-wrapper {
+    position: relative;
+    box-shadow: 0px 0px 7px #000000;
+    width: 92.5%;
+    min-height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0px;
+    margin-bottom: 50px;
+}
+
+.book-wrapper > form {
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+.book-wrapper > .price-information-wrapper {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+}
+
+.price-information-wrapper > img {
+    width: 100%;
+    height: auto;
+}
+
+.price-information-wrapper > .address {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 7px;
+}
+
+.check-in-check-out {
+    width: 100%;
+    margin: 10px;
+}
+
+.check-in-check-out > * {
+    position: relative;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+}
+
+.check-in-check-out > .night-counter {
+    margin-left: 10px;
+    margin-right: 25px;    
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.final-price {
+    font-family: 'Roboto', sans-serif;
+}

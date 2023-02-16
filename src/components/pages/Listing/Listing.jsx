@@ -2,9 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Linkify from 'react-linkify';
 
-import Listings from '../Listings/Listings.jsx';
-
 import Styles from './Listing.module.css';
+import ListingSearchOptions from './ListingSearchOptions.jsx';
 
 const MAPS_API_KEY = 'AIzaSyBm-hjwwdTR9YYWlVzSKsMPwl7n8IrLr5I';
 
@@ -103,7 +102,7 @@ const Listing = (props) => {
     let [searchParams] = useSearchParams();
 
     let [listing, setListing] = useState(undefined);
-
+    
     let listingWrapperRef = useRef(null);
 
     useEffect(() => {
@@ -156,8 +155,6 @@ const Listing = (props) => {
                     </div>
                 </section>
             </>
-        } else if(searchParams.get("lt") === "all" || props.lt === "all") {
-            return <Listings />
         } else if(searchParams.get("lt") === "modal" || props.lt === "modal") {
             let images = getImages(listing);
 
@@ -169,6 +166,66 @@ const Listing = (props) => {
                             {images.slice(0, 1)}
                             <iframe src={listing.maps_api_url} id={Styles["google-maps-iframe"]} title="google-maps-iframe" style={{border: '0'}} loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"></iframe>
                             {images.slice(1)}
+                        </div>
+                        <div id={Styles["listing-information-wrapper"]}>
+                            <h2>Address</h2>
+                            <hr />
+                            <p>
+                                {`${listing.address.street_number} ${listing.address.street_name} ${listing.address.street_type}`}
+                                <br/>
+                                {`${listing.address.apartment_number !== undefined ? `Apartment ${listing.address.apartment_number}` : ''}`}
+                                {(() => {
+                                    return listing.address.apartment_number !== undefined ? (<br />) : undefined;
+                                })()}
+                                {`${listing.address.city}, ${listing.address.state} ${listing.address.zipcode}`}
+                            </p>
+
+                            <h2>Guest Capacity</h2>
+                            <hr />
+                            <p>
+                                Holds up to <span>{listing.info.guests}</span> {listing.info.guests > 1 ? 'guests' : 'guest'}
+                                <br />
+                                <br />
+                                <span>{listing.info.bedrooms}</span> bedrooms, <span>{listing.info.bathrooms}</span> bathrooms
+                                <br />
+                                <span>{new Intl.NumberFormat().format(listing.info.sqft)}</span> sqft
+                                <br />
+                                <br />
+                                {(() => {
+                                    return listing.info.beds.king > 0 ? (<>
+                                        <span>{`${listing.info.beds.king}`}</span> {listing.info.beds.king > 1 ? 'kings' : 'king'}
+                                        <br />
+                                    </>) : undefined;
+                                })()} 
+                                {(() => {
+                                    return listing.info.beds.queen > 0 ? (<>
+                                        <span>{`${listing.info.beds.queen}`}</span> {listing.info.beds.queen > 1 ? 'queens' : 'queen'}
+                                        <br />
+                                    </>) : undefined;
+                                })()} 
+                                {(() => {
+                                    return listing.info.beds.full > 0 ? (<>
+                                        <span>{`${listing.info.beds.full}`}</span> {listing.info.beds.full > 1 ? 'fulls' : 'full'}
+                                        <br />
+                                    </>) : undefined;
+                                })()} 
+                                {(() => {
+                                    return listing.info.beds.single > 0 ? (<>
+                                        <span>{`${listing.info.beds.single}`}</span> {listing.info.beds.single > 1 ? 'singles' : 'single'}
+                                        <br />
+                                    </>) : undefined;
+                                })()} 
+                                {(() => {
+                                    return listing.info.beds.pullout_sofa > 0 ? (<>
+                                        <span>{`${listing.info.beds.pullout_sofa}`}</span> {listing.info.beds.pullout_sofa > 1 ? 'pullout sofas' : 'pullout sofa'}
+                                        <br />
+                                    </>) : undefined;
+                                })()} 
+                            </p>
+
+                            <h2>Check Availability</h2>
+                            <hr />
+                            <ListingSearchOptions listingId={listing.id} />
                         </div>
                     </div>
                 </section>

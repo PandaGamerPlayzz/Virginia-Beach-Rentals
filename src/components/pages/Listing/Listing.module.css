@@ -32,13 +32,52 @@
 }
 
 #listing-images-wrapper {
-    position: relative;
+    position: absolute;
     height: 100%;
     width: 57.5%;
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: auto;
     overflow-y: scroll;
+}
+
+#listing-information-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 42.5%;
+    right: 0%;
+}
+
+#listing-information-wrapper > h2 {
+    display: block;
+    color: var(--colors-0);
+    font-family: 'Tangerine', cursive;
+    font-weight: 1000;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+#listing-information-wrapper > hr {
+    position: relative;
+    background-color: var(--colors-0);
+    height: 1px;
+    width: 85%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#listing-information-wrapper > p {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    margin-top: 12px;
+    margin-left: 45px;
+}
+
+#listing-information-wrapper > p > span {
+    font-weight: 600;
 }
 
 #google-maps-iframe, #listing-images-wrapper img {
