@@ -4,10 +4,9 @@ import Styles from './ListingSearchOptions.module.css';
 
 const ListingSearchOptions = () => {
     const now = new Date();
-    const today = `${now.getFullYear()}-${String(2, now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
-
-    let [checkInDate, setCheckInDate] = useState(today);
-    let [checkOutDate, setCheckOutDate] = useState(today);
+    
+    let [checkInDate, setCheckInDate] = useState(null);
+    let [checkOutDate, setCheckOutDate] = useState(null);
     let [numGuests, setNumGuests] = useState(1);
 
     return (

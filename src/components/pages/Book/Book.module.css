@@ -2,7 +2,7 @@
     min-height: 100vh;
 }
 
-.book-wrapper {
+.book-wrapper, .thank-you {
     position: relative;
     box-shadow: 0px 0px 7px #000000;
     width: 92.5%;
@@ -13,9 +13,40 @@
     margin-bottom: 50px;
 }
 
+.thank-you > h1 {
+    position: absolute;
+    text-align: center;
+    font-family: 'Tangerine', cursive;
+    font-size: 70px;
+    width: 100%;
+    top: 300px;
+}
+
+.thank-you > .checkmark {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px;
+    border: 4px solid #6fa665;
+    border-radius: 1000px;
+}
+
+.thank-you > .checkmark > span {
+    position: absolute;
+    font-family: 'Tangerine', cursive;
+    font-size: 70px;
+    color: #6fa665;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .book-wrapper > form {
     position: absolute;
-    width: 55%;
+    width: 65%;
     height: 100%;
     top: 0%;
     left: 0%;
@@ -23,10 +54,15 @@
 
 .book-wrapper > .price-information-wrapper {
     position: absolute;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
     width: 35%;
     height: 100%;
     top: 0%;
     right: 0%;
+}
+
+.price-information-wrapper input {
+    text-align: center;
 }
 
 .price-information-wrapper > img {
@@ -36,19 +72,30 @@
 
 .price-information-wrapper > .address {
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     margin: 7px;
 }
 
 .check-in-check-out {
-    width: 100%;
+    position: relative;
+    display: inline-block;
     margin: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0px;
+    padding: 15px;
+    border: 2px solid #d4d4d4;
+    border-radius: 1px;
 }
 
 .check-in-check-out > * {
     position: relative;
     display: inline-block;
     font-family: 'Roboto', sans-serif;
+}
+
+.check-in-check-out h2 {
+    font-size: 22px;
 }
 
 .check-in-check-out > .night-counter {
@@ -59,5 +106,108 @@
 }
 
 .final-price {
+    position: relative;
     font-family: 'Roboto', sans-serif;
+    height: 60px;
+}
+
+.final-price > div {
+    position: relative;
+    display: inline-block;
+    margin: 0px 50px;
+    font-size: 22px;
+}
+
+.final-price > div > span {
+    display: block;
+    text-align: center;
+}
+
+.final-price > .per-night-div {
+    float: left;
+}
+
+.final-price > .total-div {
+    float: right;
+}
+
+.per-night-label, .total-label {
+    font-weight: 500;
+}
+
+.final-price > hr {
+    position: absolute;
+    height: 1px;
+    background-color: #1e1e1e;
+    width: 85%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.submit-button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    width: 68%;
+    height: 65px;
+    background-color: var(--colors-0);
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+
+/* 
+.first-name, .last-name, .email, .phone-number, .card-number, .expiration-date, .cvv, .zip, .name-on-card
+*/
+
+.input {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #d4d4d4;
+    width: 40%;
+    height: 55px;
+    margin: 30px 4%;
+}
+
+.input > h2 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: calc(100% + 7px);
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 450;
+}
+
+.input > input {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 350;
+    height: 70%;
+    width: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.first-name, .last-name {
+    margin-top: 100px;
+}
+
+.first-name, .email, .expiration-date, .zip {
+    margin-left: 7%;
+    margin-right: 1%;
+}
+
+.last-name, .phone-number, .cvv, .name-on-card {
+    margin-right: 7%;
+    margin-left: 1%;
+}
+
+.card-number {
+    width: 82%;
+    margin: 30px 7%;
 }

@@ -38,12 +38,12 @@ const Book = () => {
         <section id="section-book" className={Styles["section-book"]}>
             <div ref={wrapperRef} className={Styles["book-wrapper"]}>
                 <iframe name="dummyframe" id="dummyframe" style={{"display": "none"}}></iframe>
-                <form method="post" target="dummyframe" onSubmit={() => {
+                <form id="book-form" method="post" target="dummyframe" onSubmit={() => {
                     wrapperRef.current.style.display = "none";
                     thankYouRef.current.style.display = "block";
                 }}>
-                    <div className={Styles["first-name"]}>
-                        <h2>First Name</h2>
+                    <div className={`${Styles["first-name"]} ${Styles["input"]}`}>
+                        <h2>First Name *</h2>
                         <input
                             value={firstName}
                             onChange={e => setFirstName(e.target.value)}
@@ -51,8 +51,8 @@ const Book = () => {
                             required
                         />
                     </div>
-                    <div className={Styles["last-name"]}>
-                        <h2>Last Name</h2>
+                    <div className={`${Styles["last-name"]} ${Styles["input"]}`}>
+                        <h2>Last Name *</h2>
                         <input
                             value={lastName}
                             onChange={e => setLastName(e.target.value)}
@@ -60,8 +60,8 @@ const Book = () => {
                             required
                         />
                     </div>
-                    <div className={Styles["email"]}>
-                        <h2>Email</h2>
+                    <div className={`${Styles["email"]} ${Styles["input"]}`}>
+                        <h2>Email *</h2>
                         <input
                             value={email}
                             onChange={e => setEmail(e.target.value)}
@@ -69,19 +69,18 @@ const Book = () => {
                             required
                         />
                     </div>
-                    <div className={Styles["phone-number"]}>
-                        <h2>Phone Number</h2>
+                    <div className={`${Styles["phone-number"]} ${Styles["input"]}`}>
+                        <h2>Phone Number *</h2>
                         <input
                             value={phoneNumber}
                             onChange={e => setPhoneNumber(e.target.value)}
                             type="tel"
-                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                             required
                         />
                     </div>
 
-                    <div className={Styles["card-number"]}>
-                        <h2>Card Number</h2>
+                    <div className={`${Styles["card-number"]} ${Styles["input"]}`}>
+                        <h2>Card Number *</h2>
                         <input
                             value={cardNumber}
                             onChange={e => setCardNumber(e.target.value)}
@@ -89,8 +88,8 @@ const Book = () => {
                             required
                         />
                     </div>
-                    <div className={Styles["expiration-date"]}>
-                        <h2>Expiration Date</h2>
+                    <div className={`${Styles["expiration-date"]} ${Styles["input"]}`}>
+                        <h2>Expiration Date *</h2>
                         <input
                             value={expirationDate}
                             onChange={e => setExpirationDate(e.target.value)}
@@ -98,8 +97,8 @@ const Book = () => {
                             required
                         />
                     </div>
-                    <div className={Styles["cvv"]}>
-                        <h2>CVV</h2>
+                    <div className={`${Styles["cvv"]} ${Styles["input"]}`}>
+                        <h2>CVV *</h2>
                         <input
                             value={cvv}
                             onChange={e => setCvv(e.target.value)}
@@ -107,8 +106,8 @@ const Book = () => {
                             required
                         />
                     </div>
-                    <div className={Styles["zip"]}>
-                        <h2>ZIP Code</h2>
+                    <div className={`${Styles["zip"]} ${Styles["input"]}`}>
+                        <h2>ZIP Code *</h2>
                         <input
                             value={zip}
                             onChange={e => setZip(e.target.value)}
@@ -116,8 +115,8 @@ const Book = () => {
                             required
                         />
                     </div>
-                    <div className={Styles["name-on-card"]}>
-                        <h2>Name on Card</h2>
+                    <div className={`${Styles["name-on-card"]} ${Styles["input"]}`}>
+                        <h2>Name on Card *</h2>
                         <input
                             value={nameOnCard}
                             onChange={e => setNameOnCard(e.target.value)}
@@ -125,8 +124,6 @@ const Book = () => {
                             required
                         />
                     </div>
-
-                    <button type="submit">Confirm Booking</button>
                 </form>
                 <div className={Styles["price-information-wrapper"]}>
                     {(() => {
@@ -167,16 +164,26 @@ const Book = () => {
                                 </div>
                             </div>
                             <div className={Styles["final-price"]}>
-                                <span>${new Intl.NumberFormat().format(listing.info.price_per_night)}</span> per night
-                                <br />
-                                <span>${new Intl.NumberFormat().format(listing.info.price_per_night * numberOfNights)}</span> for <span>{numberOfNights}</span> {numberOfNights === 1 ? 'night' : 'nights'}
+                                <div className={Styles["per-night-div"]}>
+                                    <span className={Styles["per-night"]}>${new Intl.NumberFormat().format(listing.info.price_per_night)}</span>
+                                    <span className={Styles["per-night-label"]}>Per night</span>
+                                </div>
+                                <div className={Styles["total-div"]}>
+                                    <span className={Styles["total"]}>${new Intl.NumberFormat().format(listing.info.price_per_night * numberOfNights)}</span>
+                                    <span className={Styles["total-label"]}>Total</span>
+                                </div>    
+                                <hr />                            
                             </div>
+                            <button className={Styles["submit-button"]} type="submit" form="book-form">Confirm Booking</button>
                         </>
                     })()}
                 </div>
             </div>
             <div ref={thankYouRef} className={Styles["thank-you"]} style={{"display": "none"}}>
-                Thanks for choosing Virginia Beach Rentals
+                <h1>Thank you for choosing Virginia Beach Rentals</h1>
+                <div className={Styles["checkmark"]}>
+                    <span>✓</span>
+                </div>
             </div>
         </section>
     );
