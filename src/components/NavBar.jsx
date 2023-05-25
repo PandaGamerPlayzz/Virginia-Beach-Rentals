@@ -16,7 +16,7 @@ const NavBar = () => {
                         </ul>
                     </li>
                     <li className="nav-float-right">
-                        
+                        <img id="nav-logo" src="/c/img/Logo.jpeg" />
                     </li> 
                 </ul>    
             </nav>  

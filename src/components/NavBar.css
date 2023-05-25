@@ -53,3 +53,13 @@
 #nav-link-home {
     font-size: 48px;
 }
+
+#nav-logo {
+    display: none;
+    position: relative;
+    height: 90%;
+    width: auto;
+    margin-right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}

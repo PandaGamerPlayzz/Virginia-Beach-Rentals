@@ -1,5 +1,39 @@
 #footer {
     background-color: #F7DEC0;
     box-shadow: 0 0 25px rgb(10 36 88 / 25%);
-    min-height: 60vh;
+    min-height: 30vh;
+}
+
+#quote {
+    background-color: #ccac85;
+    min-height: 5vh;
+}
+
+#quote > span {
+    display: block;
+    font-family: 'Tangerine', cursive;
+    font-size: 60px;
+    text-align: center;
+    padding: 10px;
+}
+
+#footer div {
+    position: relative;
+    display: inline-block;
+    margin-top: 7px;
+    width: 25%;
+}
+
+#footer div a {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    color: #1e1e1e;
+    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+    text-decoration-thickness: 1px;
+}
+
+#footer div > span {
+    display: block;
 }

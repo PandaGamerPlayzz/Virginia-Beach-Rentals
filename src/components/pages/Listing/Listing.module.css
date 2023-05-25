@@ -34,7 +34,7 @@
 #listing-images-wrapper {
     position: absolute;
     height: 100%;
-    width: 57.5%;
+    width: 50%;
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: auto;
@@ -44,8 +44,9 @@
 #listing-information-wrapper {
     position: absolute;
     height: 100%;
-    width: 42.5%;
+    width: 50%;
     right: 0%;
+    overflow-y: scroll;
 }
 
 #listing-information-wrapper > h2 {

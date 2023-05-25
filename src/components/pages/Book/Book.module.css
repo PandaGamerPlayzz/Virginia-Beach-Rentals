@@ -6,7 +6,7 @@
     position: relative;
     box-shadow: 0px 0px 7px #000000;
     width: 92.5%;
-    min-height: 100vh;
+    min-height: 110vh;
     left: 50%;
     transform: translateX(-50%);
     margin: 15px 0px;
